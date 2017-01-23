@@ -1,0 +1,330 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Comfortaa, sans-serif, serif, helvetica;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Colors
+$primary-color: #e53a40;
+$font-color-white: #fff;
+
+// Media Queries
+$mobile-small: 20rem; //320px
+$mobile-medium: 23.44rem; //375px
+$mobile-large: 26.56rem; //425px
+$tablet: 48rem; //768px
+$laptop: 64rem; //1024px
+$laptop-large: 90rem; //1440px
+
+// Clearfix
+@mixin clearfix {
+  &::before,
+  &::after {
+    display: table;
+    content: "";
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+header {
+  position: relative;
+  nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(221,205,205,.5);
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .nav-links {
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $primary-color;
+      margin: 0 8px;
+      font-size: 1.4em;
+      @media screen and (min-width: $mobile-small) and (max-width: $mobile-medium) {
+        font-size: .9em;
+      }
+      @media screen and (min-width: $mobile-large) {
+        font-size: 1.125em;
+      }
+    }
+  }
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: url(images/bg.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  .text-wrapper {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    text-align: center;
+    @media screen and (min-width: $mobile-large) {
+      left: 10.5px;
+    }
+    @media screen and (min-width: $tablet) {
+      width: 650px;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &__title {
+      color: $font-color-white;
+      @media screen and (min-width: $tablet) {
+        text-align: center;
+        font-size: 3em;
+      }
+    }
+    &__sub-title {
+      color: $font-color-white;
+      font-size: 1.2em;
+      font-weight: 400;
+      @media screen and (min-width: $tablet) and (max-width: $laptop-large) {
+        text-align: center;
+      }
+    }
+    span {
+      display: inline-block;
+      border: 4px solid;
+      background-color: $primary-color;
+      padding: 11px;
+      text-transform: uppercase;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  @include clearfix;
+  .avatar-center {
+    display: block;
+    margin: auto;
+    &.radius {
+      border-radius: 3px;
+    }
+  }
+}
+
+.content {
+  background-color: $primary-color;
+  color: $font-color-white;
+  padding: 15px 0 30px 0;
+  @media screen and (min-width: $tablet) {
+    padding: 40px 0 70px 0;
+  }
+  &__title {
+    margin-top: 12px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    span {
+      border-bottom: 3px solid;
+      padding-bottom: 3px;
+    }
+  }
+  &__sub-title {
+  }
+  &__about {
+    margin-bottom: 0;
+    text-align: left;
+  }
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    &--info {
+      list-style: none;
+      line-height: 21px;
+      padding-left: 0;
+      @media screen and (min-width: $laptop-large) {
+        text-align: center;
+        margin-top: 25px;
+      }
+    }
+    li {
+      margin-bottom: 10px;
+      line-height: 21px;
+    }
+    &.group-images {
+      padding-left: 0;
+      display: block;
+      text-align: center;
+      @media screen and (min-width: $laptop-large) {
+        li {
+          display: inline-block;
+          margin-right: 15px;
+        }
+      }
+      .avatar {
+        border-radius: 3px;
+      }
+    }
+  }
+}
+.image-overlay {
+  width: 100%;
+  height: 50vh;
+  background: url(images/geek-girls-bg.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  &.img-2 {
+    width: 100%;
+    height: 50vh;
+    background: url(images/geek-girls-code.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+  }
+  &.img-3 {
+    width: 100%;
+    height: 50vh;
+    background: url(images/geek-girls.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+  }
+  &.img-4 {
+    width: 100%;
+    height: 50vh;
+    background: url(images/geek-girls-meetup.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+  }
+  @media screen and (min-width: $mobile-small) and (max-width: $tablet) {
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-attachment: inherit;
+    background-size: cover;
+    &.img-2,
+    &.img-3,
+    &.img-4 {
+      background-attachment: inherit;
+      background-size: cover;
+      height: 100vh;
+    }
+  }
+  .color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50vh;
+    width: 100%;
+    background-color: rgba(119,175,156,.25);
+    @media screen and (min-width: $mobile-small) and (max-width: $tablet) {
+      height: 100vh;
+    }
+  }
+}
+
+.copyright {
+  margin-bottom: 10px;
+  text-align: center;
+  color: $primary-color;
+  font-weight: 700;
+  @media screen and (min-width: $tablet) {
+    float: left;
+  }
+}
+
+footer {
+  position: relative;
+  .back-to-top {
+    position: absolute;
+    right: 27px;
+    bottom: 75px;
+    z-index: 20;
+    border: 2px solid #fff;
+    @media screen and (min-width: $mobile-small) {
+      bottom: 80px;
+      right: 28px;
+    }
+    .icon {
+      display: block;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.icon-arrow-up {
+        &::before {
+          content: "\f077";
+          display: inline-block;
+          font-family: "FontAwesome";
+          color: $font-color-white;
+        }
+      }
+    }
+  }
+}
+
+.social-links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  @media screen and (min-width: $tablet) {
+    float: right;
+    margin-top: 16px;
+  }
+  .facebook {
+    float: left;
+    @media screen and (min-width: $tablet) {
+      margin-right: 8px;
+    }
+    a {
+      color: $primary-color;
+      font-weight: 700;
+    }
+    &::after {
+      content: "\f230";
+      font-family: "FontAwesome";
+      padding-left: 8px;
+      color: $primary-color;
+    }
+  }
+  .email {
+    float: right;
+    a {
+      color: $primary-color;
+      font-weight: 700;
+    }
+    &::after {
+      content: "\f0e0";
+      font-family: "FontAwesome";
+      padding-left: 8px;
+      color: $primary-color;
+    }
+  }
+}
