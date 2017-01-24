@@ -23,9 +23,10 @@ header {
     top: 0;
     z-index: 10;
     text-align: center;
-    margin-top: 15px;
+    padding-top: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid rgba(221, 205, 205, 0.5); }
+    border-bottom: 1px solid #fff;
+    background: #de6449; }
     @media screen and (min-width: 48rem) {
       header nav {
         display: flex;
@@ -34,7 +35,7 @@ header {
     header nav .nav-links {
       text-transform: uppercase;
       font-weight: 700;
-      color: #e53a40;
+      color: #de6449;
       margin: 0 8px;
       font-size: 1.4em; }
       @media screen and (min-width: 20rem) and (max-width: 23.44rem) {
@@ -81,7 +82,7 @@ header {
     .banner .text-wrapper span {
       display: inline-block;
       border: 4px solid;
-      background-color: #e53a40;
+      background-color: #de6449;
       padding: 11px;
       text-transform: uppercase;
       font-size: 1.2em; }
@@ -102,7 +103,7 @@ header {
       border-radius: 3px; }
 
 .content {
-  background-color: #e53a40;
+  background-color: #de6449;
   color: #fff;
   padding: 15px 0 30px 0; }
   @media screen and (min-width: 48rem) {
@@ -197,7 +198,7 @@ header {
 .copyright {
   margin-bottom: 10px;
   text-align: center;
-  color: #e53a40;
+  color: #de6449;
   font-weight: 700; }
   @media screen and (min-width: 48rem) {
     .copyright {
@@ -242,22 +243,22 @@ footer {
       .social-links .facebook {
         margin-right: 8px; } }
     .social-links .facebook a {
-      color: #e53a40;
+      color: #de6449;
       font-weight: 700; }
     .social-links .facebook::after {
       content: "\f230";
       font-family: "FontAwesome";
       padding-left: 8px;
-      color: #e53a40; }
+      color: #de6449; }
   .social-links .email {
     float: right; }
     .social-links .email a {
-      color: #e53a40;
+      color: #de6449;
       font-weight: 700; }
     .social-links .email::after {
       content: "\f0e0";
       font-family: "FontAwesome";
       padding-left: 8px;
-      color: #e53a40; }
+      color: #de6449; }
 
 /*# sourceMappingURL=styles.css.map */

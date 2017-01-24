@@ -21,7 +21,7 @@ a {
 }
 
 // Colors
-$primary-color: #e53a40;
+$primary-color: #de6449; //#e53a40;
 $font-color-white: #fff;
 
 // Media Queries
@@ -52,9 +52,10 @@ header {
     top: 0;
     z-index: 10;
     text-align: center;
-    margin-top: 15px;
+    padding-top: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid rgba(221,205,205,.5);
+    border-bottom: 1px solid #fff;
+    background: $primary-color;
     @media screen and (min-width: $tablet) {
       display: flex;
       align-items: center;
