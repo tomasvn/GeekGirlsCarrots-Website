@@ -35,7 +35,7 @@ header {
     header nav .nav-links {
       text-transform: uppercase;
       font-weight: 700;
-      color: #de6449;
+      color: #fff;
       margin: 0 8px;
       font-size: 1.4em; }
       @media screen and (min-width: 20rem) and (max-width: 23.44rem) {
